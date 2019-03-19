@@ -69,6 +69,8 @@ func init() {
     reverseCodecs[0x29] = codecs["ip6"]
     codecs["ip6zone"] = &codec{id: 0x2A,name:"ip6zone",tag:"multiaddr"}
     reverseCodecs[0x2A] = codecs["ip6zone"]
+    codecs["path"] = &codec{id: 0x2F,name:"path",tag:"namespace"}
+    reverseCodecs[0x2F] = codecs["path"]
     codecs["multicodec"] = &codec{id: 0x30,name:"multicodec",tag:"multiformat"}
     reverseCodecs[0x30] = codecs["multicodec"]
     codecs["multihash"] = &codec{id: 0x31,name:"multihash",tag:"multiformat"}
@@ -149,6 +151,8 @@ func init() {
     reverseCodecs[0xd4] = codecs["md4"]
     codecs["md5"] = &codec{id: 0xd5,name:"md5",tag:"multihash"}
     reverseCodecs[0xd5] = codecs["md5"]
+    codecs["bmt"] = &codec{id: 0xd6,name:"bmt",tag:"multihash"}
+    reverseCodecs[0xd6] = codecs["bmt"]
     codecs["decred-block"] = &codec{id: 0xe0,name:"decred-block",tag:"ipld"}
     reverseCodecs[0xe0] = codecs["decred-block"]
     codecs["decred-tx"] = &codec{id: 0xe1,name:"decred-tx",tag:"ipld"}
@@ -165,6 +169,10 @@ func init() {
     reverseCodecs[0xf0] = codecs["dash-block"]
     codecs["dash-tx"] = &codec{id: 0xf1,name:"dash-tx",tag:"ipld"}
     reverseCodecs[0xf1] = codecs["dash-tx"]
+    codecs["swarm-manifest"] = &codec{id: 0xfa,name:"swarm-manifest",tag:"ipld"}
+    reverseCodecs[0xfa] = codecs["swarm-manifest"]
+    codecs["swarm-feed"] = &codec{id: 0xfb,name:"swarm-feed",tag:"ipld"}
+    reverseCodecs[0xfb] = codecs["swarm-feed"]
     codecs["udp"] = &codec{id: 0x0111,name:"udp",tag:"multiaddr"}
     reverseCodecs[0x0111] = codecs["udp"]
     codecs["p2p-webrtc-star"] = &codec{id: 0x0113,name:"p2p-webrtc-star",tag:"multiaddr"}
