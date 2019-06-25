@@ -1,8 +1,5 @@
 #!/bin/bash 
 
-#BASE='https://www.4byte.directory/api/v1/signatures/'
-#COUNT=`curl -s "${BASE}" | jq .count`
-#PAGES=$((1+$COUNT/100))
 OUTPUT=codecs.go
 
 cat >${OUTPUT} <<EOSTART
@@ -57,3 +54,5 @@ done < <(wget -q -O - https://raw.githubusercontent.com/multiformats/multicodec/
 cat >>${OUTPUT} <<EOEND
 }
 EOEND
+
+gofmt -w ${OUTPUT}
