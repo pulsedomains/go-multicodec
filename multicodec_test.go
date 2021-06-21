@@ -57,6 +57,39 @@ func TestID(t *testing.T) {
 	}
 }
 
+func TestMustID(t *testing.T) {
+	tests := []struct {
+		name   string
+		id     uint64
+		panics bool
+	}{
+		{
+			name:   "not present",
+			panics: true,
+		},
+		{
+			name: "ipfs-ns",
+			id:   0xe3,
+		},
+		{
+			name: "ipfs",
+			id:   0x1a5,
+		},
+		{
+			name: "identity",
+			id:   0x0,
+		},
+	}
+
+	for _, test := range tests {
+		if test.panics {
+			require.Panics(t, func() { MustID(test.name) })
+		} else {
+			require.NotPanics(t, func() { MustID(test.name) })
+		}
+	}
+}
+
 func TestName(t *testing.T) {
 	tests := []struct {
 		id   uint64
@@ -88,6 +121,39 @@ func TestName(t *testing.T) {
 		} else {
 			assert.Nil(t, err, fmt.Sprintf("unexpected error at test %d", i))
 			assert.Equal(t, test.name, name, fmt.Sprintf("unexpected result at test %d", i))
+		}
+	}
+}
+
+func TestMustName(t *testing.T) {
+	tests := []struct {
+		id     uint64
+		name   string
+		panics bool
+	}{
+		{
+			id:     0x123fe78bc9a,
+			panics: true,
+		},
+		{
+			id:   0xe3,
+			name: "ipfs-ns",
+		},
+		{
+			id:   0x1a5,
+			name: "p2p",
+		},
+		{
+			id:   0x0,
+			name: "identity",
+		},
+	}
+
+	for _, test := range tests {
+		if test.panics {
+			require.Panics(t, func() { MustName(test.id) })
+		} else {
+			require.NotPanics(t, func() { MustName(test.id) })
 		}
 	}
 }
