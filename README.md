@@ -1,10 +1,10 @@
 # go-multicodec
 
-[![Tag](https://img.shields.io/github/tag/wealdtech/go-multicodec.svg)](https://github.com/wealdtech/go-multicodec/releases/)
-[![License](https://img.shields.io/github/license/wealdtech/go-multicodec.svg)](LICENSE)
-[![GoDoc](https://godoc.org/github.com/wealdtech/go-multicodec?status.svg)](https://godoc.org/github.com/wealdtech/go-multicodec)
-[![Travis CI](https://img.shields.io/travis/wealdtech/go-multicodec.svg)](https://travis-ci.org/wealdtech/go-multicodec)
-[![codecov.io](https://img.shields.io/codecov/c/github/wealdtech/go-multicodec.svg)](https://codecov.io/github/wealdtech/go-multicodec)
+[![Tag](https://img.shields.io/github/tag/pulsedomains/go-multicodec.svg)](https://github.com/pulsedomains/go-multicodec/releases/)
+[![License](https://img.shields.io/github/license/pulsedomains/go-multicodec.svg)](LICENSE)
+[![GoDoc](https://godoc.org/github.com/pulsedomains/go-multicodec?status.svg)](https://godoc.org/github.com/pulsedomains/go-multicodec)
+[![Travis CI](https://img.shields.io/travis/pulsedomains/go-multicodec.svg)](https://travis-ci.org/pulsedomains/go-multicodec)
+[![codecov.io](https://img.shields.io/codecov/c/github/pulsedomains/go-multicodec.svg)](https://codecov.io/github/pulsedomains/go-multicodec)
 
 Go utility library to provide encoding and decoding of [multicodec](https://github.com/multiformats/multicodec) values.
 
@@ -22,7 +22,7 @@ Go utility library to provide encoding and decoding of [multicodec](https://gith
 `go-multicodec` is a standard Go module which can be installed with:
 
 ```sh
-go get github.com/wealdtech/go-multicodec
+go get github.com/pulsedomains/go-multicodec
 ```
 
 ## Usage
@@ -35,7 +35,7 @@ import (
     "encoding/hex"
     "errors"
 
-    multicodec "github.com/wealdtech/go-multicodec"
+    multicodec "github.com/pulsedomains/go-multicodec"
 )
 
 func main() {
@@ -73,7 +73,7 @@ Jim McDonald: [@mcdee](https://github.com/mcdee).
 
 ## Contribute
 
-Contributions welcome. Please check out [the issues](https://github.com/wealdtech/go-multicodec/issues).
+Contributions welcome. Please check out [the issues](https://github.com/pulsedomains/go-multicodec/issues).
 
 ## License
 

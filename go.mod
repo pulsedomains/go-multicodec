@@ -1,4 +1,4 @@
-module github.com/wealdtech/go-multicodec
+module github.com/pulsedomains/go-multicodec
 
 go 1.12
 
